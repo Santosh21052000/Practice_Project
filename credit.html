@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Maven Pro', sans-serif;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            background-color: hsl(216, 100%, 94%);
+        }
+
+        .first {
+            width: 300px;
+            height: 180px;
+            border-radius: 9px;
+            background: linear-gradient(to right top, #52b6fe, #6154fe);
+            position: relative;
+            box-shadow: 2px 2px 2px 2px blue;
+            padding: 30px;
+            top: 50px;
+        }
+
+        .first .second {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            color: #fff;
+            z-index: 2;
+        }
+
+        .first .second h1 {
+            z-index: 2;
+        }
+
+        .first .second img {
+            position: absolute;
+            top: 47px;
+            z-index: 2;
+            width: 30px;
+            height: 30px;
+        }
+
+        .first .second h2 {
+            font-weight: 300;
+            font-size: 10px;
+            z-index: 2;
+            text-transform: uppercase;
+        }
+
+        .first .third {
+            position: absolute;
+            bottom: 20px;
+            z-index: 2;
+        }
+
+        .first .fourth {
+            position: absolute;
+            bottom: 50px;
+            color: #fff;
+            text-transform: uppercase;
+            left: 220px;
+            font-size: 12px;
+            z-index: 2;
+        }
+
+        .first .third h2 {
+            text-transform: capitalize;
+            color: #fff;
+            z-index: 2;
+        }
+
+        .first .third p {
+            letter-spacing: 2px;
+            margin-top: 5px;
+            color: #fff;
+            z-index: 2;
+            font-weight: bold;
+        }
+
+        .first::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            /* clip-path: polygon(86% 0, 100% 50%, 59% 73%, 0% 100%, 43% 50%, 61% 59%); */
+            clip-path: polygon(100% 0, 54% 30%, 64% 83%, 25% 100%, 28% 54%, 30% 7%);
+            background: crimson;
+
+            z-index: 1;
+            border-radius: 9px;
+            background: rgb(2, 0, 36);
+            background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(24, 12, 98, 0.5749650201877626) 7%, rgba(0, 212, 255, 1) 100%)
+        }
+
+        .container form {
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, .1);
+            padding: 10px;
+            width: 600px;
+            padding-top: 100px;
+            margin-bottom: 10px;
+        }
+
+        .container form .inputBox {
+            margin-top: 20px;
+        }
+
+        .container form .inputBox span {
+            display: block;
+            color: #999;
+            padding-bottom: 5px;
+        }
+
+        .container form .inputBox input,
+        .container form .inputBox select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 0, 0, .3);
+            color: #444;
+        }
+
+        .container form .flexbox {
+            display: flex;
+            gap: 25px;
+        }
+
+        .container form .flexbox .inputBox {
+            flex: 1 1 150px;
+        }
+
+        .container form .submit-btn {
+            width: 100%;
+            background: linear-gradient(45deg, #52b6fe, #6154fe);
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 20px;
+            color: #fff;
+            border-radius: 10px;
+            cursor: pointer;
+            
+            text-transform: uppercase;
+        }
+
+        .container form .submit-btn:hover {
+            letter-spacing: 2px;
+            opacity: .8;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="first">
+            <div class="second">
+                <h2>credit</h2>
+                <img src="chip.png">
+                <h1>visa</h1>
+            </div>
+            <div class="third">
+                <h2>san mishra</h2>
+                <p>5748-4658-2081-1432</p>
+            </div>
+            <div class="fourth">
+                <p>valid </p>
+                <h3>05/23</h3>
+            </div>
+        </div>
+        <form action="">
+            <div class="inputBox">
+                <span>Card Number</span>
+                <input type="text" maxlength="16" class="card-number-input">
+            </div>
+            <div class="inputBox">
+                <span>Card Holder</span>
+                <input type="text" class="card-holder-input">
+            </div>
+            <div class="flexbox">
+                <div class="inputBox">
+                    <span>Expiration mm</span>
+                    <select name="" id="" class="month-input">
+                        <option value="month" selected disabled>Month</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                </div>
+                <div class="inputBox">
+                    <span>Expiration yy</span>
+                    <select name="" id="" class="year-input">
+                        <option value="year" selected disabled>Year</option>
+                        <option value="2021">21</option>
+                        <option value="2022">22</option>
+                        <option value="2023">23</option>
+                        <option value="2024">24</option>
+                        <option value="2025">25</option>
+                        <option value="2026">26</option>
+                        <option value="2027">27</option>
+                        <option value="2028">28</option>
+                        <option value="2029">29</option>
+                        <option value="2030">30</option>
+                    </select>
+                </div>
+                <div class="inputBox">
+                    <span>cvv</span>
+                    <input type="text" maxlength="4" class="cvv-input" placeholder="Remember Your cvv..">
+                </div>
+            </div>
+            <input type="submit" value="submit" class="submit-btn">
+        </form>
+    </div>
+</body>
+
+</html>
