@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .balls{
+            display: flex;
+            margin-top: 2rem;
+            justify-content:space-evenly;
+        }
+        .ball{
+            border-radius: 50%;
+            background-color: chartreuse;
+            border: none;
+            width:30px;
+            height: 30px;
+            margin: 5px ;       
+            
+        }
+    </style>
+
+</head>
+<body>
+    <div class="balls">
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+    </div>
+
+    <script>
+        let allballs=document.querySelectorAll(".ball");
+
+
+        function animateballs(index){
+            
+            index= index % allballs.length;
+            let curr=allballs[index];
+
+            let prev;
+            if(index===0){
+                prev=allballs[allballs.length -1];
+            }
+            else{
+                prev=allballs[index-1];
+            }
+            curr.style.opacity=0;//hide
+            prev.style.opacity=1;//display
+
+
+            setTimeout(()=>{
+                animateballs(index+1);
+            },200)
+        }
+
+        animateballs(0);
+    </script>
+</body>
+<script>
+    
+</script>
+</html>
