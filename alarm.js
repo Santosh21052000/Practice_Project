@@ -2,7 +2,7 @@ const alarmSubmit = document.getElementById('alarmSubmit');
 
 alarmSubmit.addEventListener('click', setAlarm);
 
-var audio = new Audio('');
+var audio = new Audio('./physical.mp3');
 
 // function to play the alarm ring tone
 function ringBell() {
