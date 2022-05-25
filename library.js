@@ -71,7 +71,7 @@ function libraryformsubmit(e) {
         type = wevd.value;
     }
     else if (prog.checked) {
-        type = prog.value;
+        type =prog.value;
     }
     let book = new Book(name, author, type);
     console.log(book);
